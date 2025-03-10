@@ -2,78 +2,91 @@ extends Area2D
 var notSearched:=true
 var searchable:=false
 var questItem:=false
-var types=[{"name":"items/food/food","num":3},{"name":"items/scrap/scrap","num":3},{"name":"items/quest/legs","num":1}]
+var types=Flags.types
 var type:=0
 signal trashable
+var chesttype=""
+var ptype:=0
+var pvar:=0
+var deterministic:=false
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$AnimatedSprite2D.animation=chesttype+"closed"	
+#	$questfound.volume_db=Flags.options.fx
+#	$trash.volume_db=Flags.options.fx
+	$prize.animation="default"
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Flags.paused==true:
-		return
-	
+		return	
 	if searchable==true && Flags.inSearch==true && notSearched==true:
 		do_search();
 	
-	
+func setType(ctype):
+	chesttype=ctype
+	$AnimatedSprite2D.animation=chesttype+"closed"	
 
+func setItem(n,v):
+	ptype=n
+	pvar=v
+	deterministic=true
 
 func searched():
-		$AnimatedSprite2D.animation="open"
+		$AnimatedSprite2D.animation=chesttype+"open"
 		show_prize()
 		
 func do_search():
-		print(notSearched)
-		if $AnimatedSprite2D.animation=="closed":
-			$trash.play()
+		
+		if $AnimatedSprite2D.animation==chesttype+"closed":
+			Flags.play("trash")
+			#$trash.play()
 			notSearched=false
-			$AnimatedSprite2D.animation="search"
+			$AnimatedSprite2D.animation=chesttype+"search"
 			var tween = get_tree().create_tween()
-			$AnimatedSprite2D.animation="search"
+			$AnimatedSprite2D.animation=chesttype+"search"
 			var oldmod=$AnimatedSprite2D.modulate
 			tween.tween_property($AnimatedSprite2D, "modulate", oldmod, .5)
 			tween.tween_callback(searched)
 
 func _on_body_exited(body):
 	searchable=false
-	
-	
-	pass # Replace with function body.
 
 func show_prize():
-	var rng=RandomNumberGenerator.new()
-	type=rng.randi_range(0,1)
+	type=Flags.rng.randi_range(0,2)
+	var typeallowance=2
 	if questItem==true:
-		type=2	
+		type=3	
+		typeallowance=3
 	if type>types.size()-1:
 		type=0
 
-	
+	if deterministic==true:
+		type=ptype	
 	var name=types[type].name
 	var numvariant=types[type].num
+
+
+	
+
 	var ts=$Sprite2D
-	var treenum=rng.randi_range(1,numvariant)
-
-	var istr="res://"+name+"text"+str(treenum)+".PNG"
-	var image = Image.load_from_file(istr)
-	Flags.playerInventory.append({"type":type,"item":treenum,"img":istr})
-	var texture = ImageTexture.create_from_image(image)
-	ts.texture = texture
-	#ts.position.x=$AnimatedSprite2D.position.x
-	#ts.position.y=$AnimatedSprite2D.position.y+400
-
-	add_child(ts)
+	var treenum=Flags.rng.randi_range(1,numvariant)
+	if deterministic==true:
+		treenum=pvar
+	else:
+		var randomitem=Flags.getitem(typeallowance)
+		type=randomitem.type
+		treenum=randomitem.varient
+		
+	$prize.animation=types[type].type+str(treenum)
+	Flags.addToInventory(type,treenum)
+	
 	if questItem==true:
-		$questfound.play()
-
-
-
+		Flags.play("questfound")
+#		$questfound.play()
 
 func _on_body_entered(body):
 	searchable=true
 	trashable.emit()
+
+func hit(dmg=1):
+	pass

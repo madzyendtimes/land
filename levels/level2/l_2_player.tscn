@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmj0fngswnq3e"]
+
+[ext_resource type="Script" path="res://levels/level2/l_2_player.gd" id="1_cns2e"]
+[ext_resource type="Script" path="res://levels/level2/pfeet.gd" id="2_ix2hu"]
+[ext_resource type="PackedScene" uid="uid://b8weel8tkrme6" path="res://playeranimations.tscn" id="6_ttmyq"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e28u2"]
+radius = 50.0
+height = 156.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jkox6"]
+radius = 32.0
+height = 190.0
+
+[node name="l2player" type="Node2D"]
+script = ExtResource("1_cns2e")
+
+[node name="pbody" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pbody"]
+position = Vector2(-53, -24)
+shape = SubResource("CapsuleShape2D_e28u2")
+
+[node name="pfeet" type="Area2D" parent="."]
+collision_layer = 2
+script = ExtResource("2_ix2hu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pfeet"]
+position = Vector2(-38, 99)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_jkox6")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("6_ttmyq")]
+position = Vector2(5.72205e-06, 1.71661e-05)
+scale = Vector2(1, 1)

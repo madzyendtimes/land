@@ -1,0 +1,117 @@
+[gd_scene load_steps=16 format=3 uid="uid://cdj8g8hh6wurl"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_ohfo4"]
+[ext_resource type="PackedScene" uid="uid://b8weel8tkrme6" path="res://playeranimations.tscn" id="2_i00rk"]
+[ext_resource type="AudioStream" uid="uid://b5diaegodc4xu" path="res://sounds/die.mp3" id="70_tceja"]
+[ext_resource type="AudioStream" uid="uid://cbglxmkk1gbwe" path="res://sounds/punch1.mp3" id="71_a8c0g"]
+[ext_resource type="AudioStream" uid="uid://6dd0on15gn4i" path="res://sounds/trash.mp3.mp3" id="72_blwuk"]
+[ext_resource type="AudioStream" uid="uid://cts5mr5pidjys" path="res://sounds/jump2.mp3" id="73_2xexk"]
+[ext_resource type="PackedScene" uid="uid://edw7cp3i3ijn" path="res://invImg.tscn" id="96_3w72m"]
+[ext_resource type="PackedScene" uid="uid://daalhhjwi7mri" path="res://weaponchooser.tscn" id="117_d7pic"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r2uxv"]
+radius = 48.0
+height = 128.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fdhwt"]
+radius = 32.0
+height = 128.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_602p8"]
+radius = 29.5
+height = 127.11
+
+[sub_resource type="Theme" id="Theme_j4j25"]
+default_font_size = 36
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0mhpg"]
+radius = 32.0
+height = 208.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3j8qe"]
+radius = 40.1758
+height = 232.55
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41dey"]
+size = Vector2(123.406, 79.5)
+
+[node name="player" type="CharacterBody2D"]
+position = Vector2(671, 423)
+scale = Vector2(2, 2)
+collision_layer = 2
+collision_mask = 38028
+script = ExtResource("1_ohfo4")
+
+[node name="fight" type="CollisionShape2D" parent="."]
+position = Vector2(12.5, -15.5)
+shape = SubResource("CapsuleShape2D_r2uxv")
+
+[node name="fightoffset" type="CollisionShape2D" parent="."]
+position = Vector2(-147.5, -15.5)
+shape = SubResource("CapsuleShape2D_r2uxv")
+
+[node name="offset" type="CollisionShape2D" parent="."]
+position = Vector2(-147.5, -15.5)
+shape = SubResource("CapsuleShape2D_fdhwt")
+
+[node name="normal" type="CollisionShape2D" parent="."]
+position = Vector2(-68, -16)
+shape = SubResource("CapsuleShape2D_602p8")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_i00rk")]
+
+[node name="dead" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-335.5, -211.5)
+scale = Vector2(0.5, 0.5)
+stream = ExtResource("70_tceja")
+volume_db = 24.0
+
+[node name="punch" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("71_a8c0g")
+volume_db = 24.0
+
+[node name="search" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("72_blwuk")
+volume_db = 24.0
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0.5, 4.5)
+stream = ExtResource("73_2xexk")
+volume_db = -8.117
+
+[node name="stat" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="AnimatedSprite2D" parent="stat" instance=ExtResource("96_3w72m")]
+
+[node name="Label" type="Label" parent="stat"]
+offset_left = 496.0
+offset_top = 168.0
+offset_right = 536.0
+offset_bottom = 191.0
+theme = SubResource("Theme_j4j25")
+text = "RESISTED"
+
+[node name="crouch" type="CollisionShape2D" parent="."]
+position = Vector2(-19.5, 52.5)
+rotation = 1.52022
+shape = SubResource("CapsuleShape2D_0mhpg")
+disabled = true
+
+[node name="spin" type="CollisionShape2D" parent="."]
+position = Vector2(-31.5, -35.5)
+rotation = 1.50549
+shape = SubResource("CapsuleShape2D_3j8qe")
+disabled = true
+
+[node name="weaponchooser" parent="." instance=ExtResource("117_d7pic")]
+position = Vector2(-43.5, -143.5)
+scale = Vector2(0.25, 0.25)
+
+[node name="feet" type="CharacterBody2D" parent="."]
+collision_layer = 2097152
+collision_mask = 4194304
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="feet"]
+position = Vector2(-47.5, 88.5)
+shape = SubResource("RectangleShape2D_41dey")

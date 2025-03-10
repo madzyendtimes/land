@@ -1,0 +1,73 @@
+extends Area2D
+var eq=load("res://event_q.gd")
+var et
+var dir=-1
+var rng=RandomNumberGenerator.new()
+var speed=1
+var isground=false
+var currentground=600
+var fall
+var following=false
+var friendly=false
+var stopped=false
+var ename
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	ename="e"+str(rng.randi_range(1,6))
+	if Flags.rng.randi_range(0,100)>65:
+		friendly=true
+		ename="f"+str(rng.randi_range(1,2))
+	$AnimatedSprite2D.animation=ename
+	speed=rng.randi_range(1,4)
+	et=eq.new()	
+	
+	changedir()
+
+func stop():
+	stopped=true
+
+
+func setdir(d):
+	stopped=false
+	dir=d
+	$AnimatedSprite2D.flip_h=dir>0
+
+func changedir():
+	if rng.randi_range(0,100)>75 && !following:
+		setdir(dir*-1)
+		
+
+	et.dotime(self,[changedir],rng.randf_range(.5,3.0),"changedir"+str(get_instance_id()))
+
+
+func makefriend(sp):
+	if !following:
+		Flags.followers.append(self)
+		$Label.text="friend " +str(Flags.followers.size())
+		speed=max((sp-.5)-((Flags.followers.size())/4),.5)
+		following=true
+	
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if !stopped:
+		position.x+=speed*dir
+	if !isground && !$efeet.has_overlapping_areas():
+		position.y+=5
+		if position.y>600:
+			position.y=600
+			isground=true
+
+
+func _on_area_entered(area: Area2D) -> void:
+	
+	if (area.name.contains("player"))&&(!following) && friendly:
+		Flags.followers.append(self)
+		$Label.text="friend " +str(Flags.followers.size())
+		speed=max((area.speed-.5)-((Flags.followers.size())/4),.5)
+		following=true
+		pass
+	
+	if !isground:
+		position.y=area.position.y
+	pass # Replace with function body.

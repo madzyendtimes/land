@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://btc4gueojibu1"]
+
+[ext_resource type="Script" path="res://levels/level2/level_2.gd" id="1_ywaul"]
+
+[node name="level2" type="Node2D"]
+script = ExtResource("1_ywaul")
+
+[node name="playarea" type="Node2D" parent="."]
+
+[node name="back" type="Node2D" parent="playarea"]
+
+[node name="platforms" type="Node2D" parent="playarea"]
+
+[node name="enemies" type="Node2D" parent="playarea"]
+
+[node name="fore" type="Node2D" parent="playarea"]
