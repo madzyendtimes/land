@@ -27,7 +27,8 @@ func _ready() -> void:
 
 func stop():
 	stopped=true
-
+func unstopped():
+	stopped=false
 
 func setdir(d):
 	stopped=false
@@ -38,8 +39,8 @@ func changedir():
 	if rng.randi_range(0,100)>75 && !following:
 		setdir(dir*-1)
 		
-
-	et.dotime(self,[changedir],rng.randf_range(.5,3.0),"changedir"+str(get_instance_id()))
+	if !following:
+		et.dotime(self,[changedir],rng.randf_range(.5,3.0),"changedir"+str(get_instance_id()))
 
 
 func makefriend(sp):
@@ -52,6 +53,15 @@ func makefriend(sp):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if following:
+		var temppos=global_position.x-Flags.playerposition
+		if temppos<-20:
+			setdir(1)
+		elif temppos>20:
+			setdir(-1)
+		else:
+			stopped=true
+			
 	if !stopped:
 		position.x+=speed*dir
 	if !isground && !$efeet.has_overlapping_areas():

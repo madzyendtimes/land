@@ -79,19 +79,24 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_released("jump"):
 		player.unjump()
 	
-	if canplay:
-		player.position.x+=player.dir*Flags.playerStats.speed
+#	if canplay:
+		#player.position.x+=player.dir*Flags.playerStats.speed
 
 	movealong()
+	#follow()
 			
 func movealong():
-	position.x=-1*player.position.x+500
+	var ppos=Flags.dir*Flags.playerStats.speed
+	#position.x=-1*player.position.x+500
 	#position.x=Flags.dir*Flags.playerStats.speed
 	$playarea.position.y=-1*(player.position.y-200)*.5
-	print(player.position.x)
-	$playarea/fore.position.x=-1*player.position.x+500*.25
-	$playarea/back.position.x=(-1*player.position.x+500)*.05
-	follow()
+	#print(player.position.x)
+	$playarea/platforms.position.x=ppos
+	$playarea/enemies.position.x=ppos*.75
+	$playarea/fore.position.x=ppos*.25
+	$playarea/back.position.x=ppos*.05
+	Flags.playerposition=player.position.x
+
 	
 func follow():
 
@@ -99,10 +104,10 @@ func follow():
 	for i in Flags.followers:
 		var px=1
 		count+=1
-		var test=(i.position.x-($playarea.position.x-25))
+		var test=(i.position.x+$playarea.position.x-(player.position.x))
 		if count==1:
 			#print(test)
-			print(i.position.x," - ",$playarea.position.x)
+			print(i.position.x,"-",player.position.x," : ",player.position.x+$playarea.position.x-i.position.x)
 		if (test>20):
 			px=-1
 		elif test<-20:
@@ -110,5 +115,6 @@ func follow():
 		else:
 			i.stop()
 			return
+		i.unstopped()
 		i.setdir(px)
 	pass
