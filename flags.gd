@@ -226,7 +226,7 @@ var amode=[]
 var petmove=true
 var sounds={"music":{},"fx":{}}
 var seed=0
-
+var followers=[]
 var acheivements={
 	"firstkill":{"criteria":func criteriamet(aobj): return aobj.value>0,"description":"Kill 1 enemy total","points":10,"name":"You choose murder!"},
 	"firstdeath":{"criteria":func criteriamet(aobj): return aobj.value>0,"description":"Die 1 time total","points":10,"name":"Alert the next of kin!"},
@@ -632,7 +632,7 @@ func refreshPlayer():
 		"toughness":megaStats.toughness,
 		"karma":megaStats.karma
 	}
-
+	
 	credit=megaStats.credit
 	#translate old saves
 	if megaStats.attackmode.get("fist") != null:

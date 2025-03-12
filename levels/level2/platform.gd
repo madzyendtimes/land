@@ -1,6 +1,6 @@
 extends Area2D
 var type="p1"
-
+var kind="platform"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	type="p"+str(Flags.rng.randi_range(1,4))

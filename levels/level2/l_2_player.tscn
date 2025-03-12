@@ -16,7 +16,10 @@ height = 190.0
 script = ExtResource("1_cns2e")
 
 [node name="pbody" type="Area2D" parent="."]
-collision_layer = 4
+collision_layer = 2
+collision_mask = 9
+collision_priority = 3.0
+priority = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pbody"]
 position = Vector2(-53, -24)
@@ -34,3 +37,5 @@ shape = SubResource("CapsuleShape2D_jkox6")
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("6_ttmyq")]
 position = Vector2(5.72205e-06, 1.71661e-05)
 scale = Vector2(1, 1)
+
+[connection signal="area_entered" from="pbody" to="." method="_on_pbody_area_entered"]

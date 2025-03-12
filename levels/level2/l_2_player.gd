@@ -7,17 +7,21 @@ var jumpaction=1
 var jumpcount=40
 var injump=false
 var upspeed=15
+var canmove=true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
 func left():
+	
+	canmove=true
 	Flags.dir=1
 	$AnimatedSprite2D.flip_h=true
 	$pfeet/CollisionShape2D.position.x=+25
 	
 
 func right():
+		canmove=true
 		Flags.dir=-1
 		$AnimatedSprite2D.flip_h=false
 		$pfeet/CollisionShape2D.position.x=-25
@@ -67,3 +71,9 @@ func _process(delta: float) -> void:
 			setpos(0)
 			jumpaction=1
 		freefall=false 
+
+
+func _on_pbody_area_entered(area: Area2D) -> void:
+	if area.kind=="friendly":
+		area.makefriend(5)
+	pass # Replace with function body.

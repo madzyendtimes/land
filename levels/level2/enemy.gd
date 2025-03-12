@@ -5,18 +5,20 @@ var dir=-1
 var rng=RandomNumberGenerator.new()
 var speed=1
 var isground=false
-var currentground=600
+var currentground=800
 var fall
 var following=false
 var friendly=false
 var stopped=false
 var ename
+var kind="enemy"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ename="e"+str(rng.randi_range(1,6))
 	if Flags.rng.randi_range(0,100)>65:
 		friendly=true
 		ename="f"+str(rng.randi_range(1,2))
+		kind="friendly"
 	$AnimatedSprite2D.animation=ename
 	speed=rng.randi_range(1,4)
 	et=eq.new()	
@@ -64,7 +66,7 @@ func _on_area_entered(area: Area2D) -> void:
 	if (area.name.contains("player"))&&(!following) && friendly:
 		Flags.followers.append(self)
 		$Label.text="friend " +str(Flags.followers.size())
-		speed=max((area.speed-.5)-((Flags.followers.size())/4),.5)
+		#speed=max((area.speed-.5)-((Flags.followers.size())/4),.5)
 		following=true
 		pass
 	
