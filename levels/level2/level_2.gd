@@ -96,6 +96,7 @@ func movealong():
 	$playarea/fore.position.x=ppos*.25
 	$playarea/back.position.x=ppos*.05
 	Flags.playerposition=player.position.x
+	Flags.playerpositiony=player.position.y
 
 	
 func follow():

@@ -71,7 +71,7 @@ func _process(delta: float) -> void:
 			setpos(0)
 			jumpaction=1
 		freefall=false 
-
+	Flags.playerpositiony=position.y
 
 func _on_pbody_area_entered(area: Area2D) -> void:
 	if area.kind=="friendly":
