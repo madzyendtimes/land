@@ -78,7 +78,10 @@ func _process(delta: float) -> void:
 		player.jump()
 	if Input.is_action_just_released("jump"):
 		player.unjump()
-	
+	if Input.is_action_pressed("run"):
+		Flags.playerStats.bonusSpeed=3
+	if Input.is_action_just_released("run"):
+		Flags.playerStats.bonusSpeed=0
 #	if canplay:
 		#player.position.x+=player.dir*Flags.playerStats.speed
 

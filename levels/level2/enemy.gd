@@ -104,7 +104,7 @@ func _process(delta: float) -> void:
 			canjump=false
 			Flags.tne.dotime(self,[allowjump],Flags.rng.randf_range(1.5,3.0),str(get_instance_id())+"canjump",true)
 		else:
-			position.y-=5		
+			position.y-=9		
 	if !stopped:
 		position.x+=speed*dir
 	if !isground && !$efeet.has_overlapping_areas()&& !injump:
@@ -115,7 +115,7 @@ func _process(delta: float) -> void:
 				break
 		if !validcollision:
 			return
-		position.y+=5
+		position.y+=9
 		if position.y>800:
 			position.y=800
 			isground=true
@@ -128,7 +128,7 @@ func _on_ebody_area_entered(area: Area2D) -> void:
 	if (area.name.contains("pbody"))&&(!following) && friendly:
 		Flags.followers.append(self)
 		$Label.text="friend " +str(Flags.followers.size())
-		speed=max((Flags.playerStats.speed-.5)-((Flags.followers.size())/4),.5)
+		speed=max(((Flags.playerStats.speed*3)-Flags.rng.randf_range(.25,.75))-(Flags.followers.size()/4),2.0)
 		following=true
 		pass
 	

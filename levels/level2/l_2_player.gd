@@ -19,14 +19,14 @@ func left():
 	Flags.dir=1
 	$AnimatedSprite2D.flip_h=true
 	$pfeet/CollisionShape2D.position.x=+25
-	
+	$pbody/CollisionShape2D.position.x=+60
 
 func right():
 		canmove=true
 		Flags.dir=-1
 		$AnimatedSprite2D.flip_h=false
 		$pfeet/CollisionShape2D.position.x=-25
-
+		$pbody/CollisionShape2D.position.x=-30
 func unjump():
 	injump=false
 	
