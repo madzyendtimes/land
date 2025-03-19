@@ -104,18 +104,24 @@ func follow():
 	var count=0
 	for i in Flags.followers:
 		var px=1
+		var py=1
 		count+=1
-		var test=(i.position.x+$playarea.position.x-(player.position.x))
-		if count==1:
+		var test=(i.position.x-$playarea.position.x+(player.position.x))
+		var testy=(i.position.y+$playarea.position.y+(player.position.y))
+		#if count==1:
 			#print(test)
-			print(i.position.x,"-",player.position.x," : ",player.position.x+$playarea.position.x-i.position.x)
+			#print(i.position.x,"-",player.position.x," : ",player.position.x+$playarea.position.x-i.position.x)
 		if (test>20):
 			px=-1
+			py=1
 		elif test<-20:
 			px=1
+			py=-1
 		else:
-			i.stop()
+			if !i.injump():
+				i.stop()
 			return
 		i.unstopped()
 		i.setdir(px)
+		i.setydir(py)
 	pass

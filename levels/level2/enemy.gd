@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 var eq=load("res://event_q.gd")
 var et
 var dir=-1
@@ -14,6 +14,8 @@ var ename
 var kind="enemy"
 var injump=false
 var jumpcount=0
+var ydirection=1
+var canjump=true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ename="e"+str(rng.randi_range(1,6))
@@ -24,14 +26,16 @@ func _ready() -> void:
 	$AnimatedSprite2D.animation=ename
 	speed=rng.randi_range(1,4)
 	et=Flags.tne
-	
 	changedir()
 
 func jump():
-	if injump:
+
+	if injump || !canjump:
 		return
+	canjump=false
+#	ydirection=-1
 	injump=true
-	jumpcount=20
+	jumpcount=60
 	
 
 func stop():
@@ -39,6 +43,12 @@ func stop():
 func unstopped():
 	stopped=false
 
+func injumptest():
+	return injump
+
+func setydir(ydir):
+	ydirection=ydir	
+	
 func setdir(d):
 	stopped=false
 	dir=d
@@ -53,12 +63,16 @@ func changedir():
 
 
 func makefriend(sp):
+	print("friended from enemy")
 	if !following:
 		Flags.followers.append(self)
 		$Label.text="friend " +str(Flags.followers.size())
 		speed=max((sp-.5)-((Flags.followers.size())/4),.5)
 		following=true
-	
+		print("following is now true")
+
+func allowjump():
+	canjump=true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -69,34 +83,62 @@ func _process(delta: float) -> void:
 		var temppos=global_position.x-Flags.playerposition
 		if temppos<-20:
 			setdir(1)
+
 		elif temppos>20:
 			setdir(-1)
 		else:
 			stopped=true
+		
+#		
+#		if temposy<-20:
+#			setydir(1)
+#
+#		elif temposy>20:
+#			setydir(-1)
+#		else:
+#			stopped=true
 	if injump:
 		jumpcount-=1
 		if jumpcount<1:
 			injump=false
+			isground=false
+			canjump=false
+			Flags.tne.dotime(self,[allowjump],1.5,str(get_instance_id())+"canjump",true)
 			return
-		position.y+=5		
+		position.y-=5		
 	if !stopped:
 		position.x+=speed*dir
 	if !isground && !$efeet.has_overlapping_areas()&& !injump:
+		var validcollision=true	
+		for i in $efeet.get_overlapping_areas():
+			if i.name.contains("player"):
+				validcollision=false
+				break
+		if !validcollision:
+			return
 		position.y+=5
 		if position.y>600:
 			position.y=600
 			isground=true
 
 
-func _on_area_entered(area: Area2D) -> void:
-	
-	if (area.name.contains("player"))&&(!following) && friendly:
+
+
+func _on_ebody_area_entered(area: Area2D) -> void:
+
+	if (area.name.contains("pbody"))&&(!following) && friendly:
 		Flags.followers.append(self)
 		$Label.text="friend " +str(Flags.followers.size())
-		speed=max((area.speed-.5)-((Flags.followers.size())/4),.5)
+		speed=max((Flags.playerStats.speed-.5)-((Flags.followers.size())/4),.5)
 		following=true
 		pass
 	
+
+	
+
+
+func _on_efeet_area_entered(area: Area2D) -> void:
+	print(area.name)
 	if !isground:
-		position.y=area.position.y
+		position.y=area.position.y-150
 	pass # Replace with function body.

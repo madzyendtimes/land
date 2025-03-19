@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cd6pho0c4qmuy"]
+[gd_scene load_steps=31 format=3 uid="uid://cd6pho0c4qmuy"]
 
 [ext_resource type="Script" path="res://levels/level2/enemy.gd" id="1_ginh4"]
 [ext_resource type="Texture2D" uid="uid://cn6jnmdwi5uur" path="res://enemies/goopbaby/stagea1.PNG" id="2_a8bqm"]
@@ -26,6 +26,10 @@
 [ext_resource type="Texture2D" uid="uid://flqk2twq5s8f" path="res://level2/freindly/fanguy/IMG_6919.PNG" id="23_2hr08"]
 [ext_resource type="Texture2D" uid="uid://cxuwdc5wb2mtc" path="res://level2/freindly/fanguy/IMG_6920.PNG" id="24_15oyn"]
 [ext_resource type="Texture2D" uid="uid://ci6iu11rbyl48" path="res://level2/freindly/fanguy/IMG_6921.PNG" id="25_dwauv"]
+[ext_resource type="Script" path="res://levels/level2/ebody.gd" id="27_hj8xe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgroj"]
+size = Vector2(98, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pktcu"]
 animations = [{
@@ -148,21 +152,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_i5a4e"]
 radius = 93.4933
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgroj"]
-size = Vector2(98, 16)
-
-[node name="enemy" type="Area2D"]
-collision_layer = 8
-collision_mask = 2
+[node name="enemy" type="Node2D"]
 script = ExtResource("1_ginh4")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_pktcu")
-animation = &"f2"
-autoplay = "e1"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_i5a4e")
 
 [node name="efeet" type="Area2D" parent="."]
 collision_layer = 16
@@ -171,9 +162,23 @@ collision_layer = 16
 position = Vector2(13, 118)
 shape = SubResource("RectangleShape2D_jgroj")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pktcu")
+animation = &"f2"
+autoplay = "e1"
+
 [node name="Label" type="Label" parent="."]
 offset_top = -100.0
 offset_right = 53.0
 offset_bottom = -77.0
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[node name="ebody" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("27_hj8xe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ebody"]
+shape = SubResource("CircleShape2D_i5a4e")
+
+[connection signal="area_entered" from="efeet" to="." method="_on_efeet_area_entered"]
+[connection signal="area_entered" from="ebody" to="." method="_on_ebody_area_entered"]

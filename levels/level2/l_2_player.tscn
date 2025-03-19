@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmj0fngswnq3e"]
+[gd_scene load_steps=7 format=3 uid="uid://bmj0fngswnq3e"]
 
 [ext_resource type="Script" path="res://levels/level2/l_2_player.gd" id="1_cns2e"]
+[ext_resource type="Script" path="res://levels/level2/pbody.gd" id="2_hdx1n"]
 [ext_resource type="Script" path="res://levels/level2/pfeet.gd" id="2_ix2hu"]
 [ext_resource type="PackedScene" uid="uid://b8weel8tkrme6" path="res://playeranimations.tscn" id="6_ttmyq"]
 
@@ -20,6 +21,7 @@ collision_layer = 2
 collision_mask = 9
 collision_priority = 3.0
 priority = 1
+script = ExtResource("2_hdx1n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pbody"]
 position = Vector2(-53, -24)
