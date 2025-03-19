@@ -35,7 +35,7 @@ func jump():
 	canjump=false
 #	ydirection=-1
 	injump=true
-	jumpcount=60
+	jumpcount=90
 	
 
 func stop():
@@ -63,13 +63,13 @@ func changedir():
 
 
 func makefriend(sp):
-	print("friended from enemy")
+	#print("friended from enemy")
 	if !following:
 		Flags.followers.append(self)
 		$Label.text="friend " +str(Flags.followers.size())
 		speed=max((sp-.5)-((Flags.followers.size())/4),.5)
 		following=true
-		print("following is now true")
+	#	print("following is now true")
 
 func allowjump():
 	canjump=true
@@ -77,8 +77,7 @@ func allowjump():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if following:
-		print(global_position.y,Flags.playerpositiony)
-		if global_position.y-10>Flags.playerpositiony:
+		if global_position.y-50>Flags.playerpositiony:
 			jump()
 		var temppos=global_position.x-Flags.playerposition
 		if temppos<-20:
@@ -103,9 +102,9 @@ func _process(delta: float) -> void:
 			injump=false
 			isground=false
 			canjump=false
-			Flags.tne.dotime(self,[allowjump],1.5,str(get_instance_id())+"canjump",true)
-			return
-		position.y-=5		
+			Flags.tne.dotime(self,[allowjump],Flags.rng.randf_range(1.5,3.0),str(get_instance_id())+"canjump",true)
+		else:
+			position.y-=5		
 	if !stopped:
 		position.x+=speed*dir
 	if !isground && !$efeet.has_overlapping_areas()&& !injump:
@@ -117,8 +116,8 @@ func _process(delta: float) -> void:
 		if !validcollision:
 			return
 		position.y+=5
-		if position.y>600:
-			position.y=600
+		if position.y>800:
+			position.y=800
 			isground=true
 
 
@@ -138,7 +137,6 @@ func _on_ebody_area_entered(area: Area2D) -> void:
 
 
 func _on_efeet_area_entered(area: Area2D) -> void:
-	print(area.name)
 	if !isground:
-		position.y=area.position.y-150
+		position.y=area.position.y-165
 	pass # Replace with function body.
