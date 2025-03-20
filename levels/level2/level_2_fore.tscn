@@ -1,11 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://crd4aigo8bojy"]
+[gd_scene load_steps=16 format=3 uid="uid://crd4aigo8bojy"]
 
 [ext_resource type="Script" path="res://level_2_fore.gd" id="1_ly5si"]
 [ext_resource type="Texture2D" uid="uid://1ahospskkxyn" path="res://level2/decoration/fore/f1.PNG" id="2_btkhw"]
 [ext_resource type="Texture2D" uid="uid://bx8fcjknscia0" path="res://level2/decoration/fore/f2.PNG" id="3_2qqne"]
+[ext_resource type="Texture2D" uid="uid://d2efd15hrf2yc" path="res://level2/decoration/fore/f10.PNG" id="3_f4yhe"]
 [ext_resource type="Texture2D" uid="uid://w56d8uwpnwfi" path="res://level2/decoration/fore/f3.PNG" id="4_83p3p"]
+[ext_resource type="Texture2D" uid="uid://cjahykcx3tvfh" path="res://level2/decoration/fore/f11.PNG" id="4_j4pfw"]
+[ext_resource type="Texture2D" uid="uid://8d3cv3xjuxsy" path="res://level2/decoration/fore/f12.PNG" id="5_6dubn"]
 [ext_resource type="Texture2D" uid="uid://dy1g61vjhgj4e" path="res://level2/decoration/fore/f4.PNG" id="5_gyg30"]
 [ext_resource type="Texture2D" uid="uid://dlbag2f2kwqhe" path="res://level2/decoration/fore/f5.PNG" id="6_g0li4"]
+[ext_resource type="Texture2D" uid="uid://ym75t5u14gbc" path="res://level2/decoration/fore/f13.PNG" id="6_gbg6o"]
 [ext_resource type="Texture2D" uid="uid://x16ueu2870wq" path="res://level2/decoration/fore/f6.PNG" id="7_hl072"]
 [ext_resource type="Texture2D" uid="uid://pw2autitj1os" path="res://level2/decoration/fore/f7.PNG" id="8_mrkqd"]
 [ext_resource type="Texture2D" uid="uid://bpg2up0hkifd1" path="res://level2/decoration/fore/f8.PNG" id="9_lyxan"]
@@ -19,6 +23,38 @@ animations = [{
 }],
 "loop": true,
 "name": &"f1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_f4yhe")
+}],
+"loop": true,
+"name": &"f10",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_j4pfw")
+}],
+"loop": true,
+"name": &"f11",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6dubn")
+}],
+"loop": true,
+"name": &"f12",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gbg6o")
+}],
+"loop": true,
+"name": &"f13",
 "speed": 5.0
 }, {
 "frames": [{
@@ -91,4 +127,4 @@ script = ExtResource("1_ly5si")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_uqn1u")
-animation = &"f9"
+animation = &"f10"

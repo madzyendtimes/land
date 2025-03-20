@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bff6jqo0ykwnq"]
+
+[ext_resource type="Script" path="res://level_2_big_fore.gd" id="1_jah42"]
+[ext_resource type="Texture2D" uid="uid://dx4fbfbgli0h" path="res://level2/decoration/fore/bf1.PNG" id="2_s44lb"]
+[ext_resource type="Texture2D" uid="uid://mk2bb1gevoex" path="res://level2/decoration/fore/bf2.PNG" id="3_asipc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bxy0m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_s44lb")
+}],
+"loop": true,
+"name": &"bf1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_asipc")
+}],
+"loop": true,
+"name": &"bf2",
+"speed": 5.0
+}]
+
+[node name="level_2_big_fore" type="Node2D"]
+script = ExtResource("1_jah42")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bxy0m")
+animation = &"bf2"

@@ -6,6 +6,7 @@ var shscene:PackedScene=load("res://levels/level2/safehouse.tscn")
 var backscene:PackedScene=load("res://levels/level2/level_2_back.tscn")
 var forescene:PackedScene=load("res://levels/level2/level_2_fore.tscn")
 var wallscene:PackedScene=load("res://levels/level2/level_2_wall.tscn")
+var bfscene:PackedScene=load("res://levels/level2/level_2_big_fore.tscn")
 var ypos=300
 var player
 var dir=1
@@ -31,7 +32,7 @@ func _ready() -> void:
 		else:
 			r.position.y=clamp(ypos+randi_range(-35,35),-200,200)
 			ypos=r.position.y
-				
+		r.z_index=-1
 		r.position.y+=300
 		$playarea/platforms.add_child(r)
 		if i==sfloc:
@@ -66,8 +67,15 @@ func _ready() -> void:
 		if Flags.rng.randi_range(0,100)>70:
 			var f=forescene.instantiate()
 			f.position.x=(count*150)+Flags.rng.randi_range(-100,500)
-			f.position.y=475
+			f.position.y=525
 			f.z_index=8
+			$playarea/fore.add_child(f)
+			
+		if Flags.rng.randi_range(0,1000)>995:
+			var f=bfscene.instantiate()
+			f.position.x=(count*150)+Flags.rng.randi_range(-100,500)
+			f.position.y=490
+			f.z_index=9
 			$playarea/fore.add_child(f)
 		
 		
