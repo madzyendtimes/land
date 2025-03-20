@@ -9,8 +9,12 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func makefriend(sp):
-	print("make friend")
 	get_parent().makefriend(sp)
+
+func hit():
+	get_parent().hit()
+
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

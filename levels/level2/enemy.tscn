@@ -174,7 +174,7 @@ offset_bottom = -77.0
 
 [node name="ebody" type="Area2D" parent="."]
 collision_layer = 8
-collision_mask = 2
+collision_mask = 258
 script = ExtResource("27_hj8xe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ebody"]

@@ -20,6 +20,29 @@ func left():
 	$AnimatedSprite2D.flip_h=true
 	$pfeet/CollisionShape2D.position.x=+25
 	$pbody/CollisionShape2D.position.x=+60
+	$pfight/CollisionShape2D.position.x=-70
+
+func crouch():
+	$pbody/CollisionShape2D.disabled=true
+	$pbody/crouch.disabled=false
+	$AnimatedSprite2D.animation="crouch"
+	
+func uncrouch():
+	$pbody/CollisionShape2D.disabled=false
+	$pbody/crouch.disabled=true
+	$AnimatedSprite2D.animation="default"	
+
+func fight():
+	if injump || freefall:
+		return
+	$pfight/CollisionShape2D.disabled=false
+	$AnimatedSprite2D.animation="fight"
+	Flags.tne.dotime(self,[unfight],.3,"playerfight",true)
+	
+func unfight():
+	$pfight/CollisionShape2D.disabled=true
+	$AnimatedSprite2D.animation="default"
+
 
 func right():
 		canmove=true
@@ -27,10 +50,13 @@ func right():
 		$AnimatedSprite2D.flip_h=false
 		$pfeet/CollisionShape2D.position.x=-25
 		$pbody/CollisionShape2D.position.x=-30
+		$pfight/CollisionShape2D.position.x=+70
 func unjump():
 	injump=false
 	
 func jump():
+	if $AnimatedSprite2D.animation=="crouch":
+		uncrouch()
 	if jumpaction>0:
 		jumpaction-=1
 		jumpcount=40
@@ -45,7 +71,7 @@ func jump():
 
 func setpos(ypos):
 	#if !freefall:
-	var pos=600
+	var pos=500
 	var pareas=$pfeet.get_overlapping_areas()
 	for i in pareas:
 		if (i.position.y/1.69)-5<pos:
@@ -62,7 +88,7 @@ func setpos(ypos):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#print($pfeet.has_overlapping_areas(), " ", position.y)
-	if position.y<600 && !$pfeet.has_overlapping_areas() && !injump:
+	if position.y<500 && !$pfeet.has_overlapping_areas() && !injump:
 		position.y+=fallspeed
 		freefall=true
 #		if $pfeet.has_overlapping_areas():
@@ -77,4 +103,9 @@ func _process(delta: float) -> void:
 func _on_pbody_area_entered(area: Area2D) -> void:
 	if area.kind=="friendly":
 		area.makefriend(5)
+	pass # Replace with function body.
+
+
+func _on_pfight_area_entered(area: Area2D) -> void:
+	area.hit()
 	pass # Replace with function body.

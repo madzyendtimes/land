@@ -3,6 +3,9 @@ var platscene:PackedScene=load("res://levels/level2/platform.tscn")
 var playerscene:PackedScene=load("res://levels/level2/l_2_player.tscn")
 var enemyscene:PackedScene=load("res://levels/level2/enemy.tscn")
 var shscene:PackedScene=load("res://levels/level2/safehouse.tscn")
+var backscene:PackedScene=load("res://levels/level2/level_2_back.tscn")
+var forescene:PackedScene=load("res://levels/level2/level_2_fore.tscn")
+var wallscene:PackedScene=load("res://levels/level2/level_2_wall.tscn")
 var ypos=300
 var player
 var dir=1
@@ -14,6 +17,11 @@ func _ready() -> void:
 	var sfloc=Flags.rng.randi_range(50,400)
 	for i in range(0,500):
 		count+=1
+		var b=backscene.instantiate()
+		b.position.x=i*(100+Flags.rng.randi_range(0,50))
+		b.position.y=150
+		b.z_index=-20
+		$playarea/back.add_child(b)
 		var r=platscene.instantiate()
 		r.position.x=count*150+Flags.rng.randi_range(-80,80)
 		if Flags.rng.randi_range(0,100)>90:
@@ -24,7 +32,7 @@ func _ready() -> void:
 			r.position.y=clamp(ypos+randi_range(-35,35),-200,200)
 			ypos=r.position.y
 				
-		r.position.y+=400
+		r.position.y+=300
 		$playarea/platforms.add_child(r)
 		if i==sfloc:
 			var sh=shscene.instantiate()
@@ -35,7 +43,7 @@ func _ready() -> void:
 		enemy.position.x=i*100
 		enemy.isground=true
 		enemy.modulate=Color(Flags.rng.randf_range(0,1),Flags.rng.randf_range(0,1),Flags.rng.randf_range(0,1))
-		enemy.position.y=800
+		enemy.position.y=600
 
 		$playarea/enemies.add_child(enemy)
 		var range=1.4
@@ -49,6 +57,20 @@ func _ready() -> void:
 		#enemy.scale.y=rng.randf_range(.75,1.4)
 		#enemy.scale.x=rng.randf_range(.75,1.4)
 		enemy.z_index=enemy.scale.y
+		if i%10==0:
+			var d=wallscene.instantiate()
+			d.position.x=r.position.x-Flags.rng.randi_range(-25,25)
+			d.position.y=550
+			d.z_index=-2
+			$playarea/back.add_child(d)
+		if Flags.rng.randi_range(0,100)>70:
+			var f=forescene.instantiate()
+			f.position.x=(count*150)+Flags.rng.randi_range(-100,500)
+			f.position.y=475
+			f.z_index=8
+			$playarea/fore.add_child(f)
+		
+		
 		
 	player=playerscene.instantiate()
 	player.position.x=300
@@ -82,6 +104,12 @@ func _process(delta: float) -> void:
 		Flags.playerStats.bonusSpeed=3
 	if Input.is_action_just_released("run"):
 		Flags.playerStats.bonusSpeed=0
+	if Input.is_action_pressed("down"):
+		player.crouch()
+	if Input.is_action_just_released("down"):
+		player.uncrouch()
+	if Input.is_action_just_pressed("fight"):
+		player.fight()
 #	if canplay:
 		#player.position.x+=player.dir*Flags.playerStats.speed
 

@@ -116,12 +116,13 @@ func _process(delta: float) -> void:
 		if !validcollision:
 			return
 		position.y+=9
-		if position.y>800:
-			position.y=800
+		if position.y>600:
+			position.y=600
 			isground=true
 
 
-
+func hit():
+	queue_free()
 
 func _on_ebody_area_entered(area: Area2D) -> void:
 

@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=3 uid="uid://bjebmhikvwvti"]
+
+[ext_resource type="Script" path="res://level_2_wall.gd" id="1_27phs"]
+[ext_resource type="Texture2D" uid="uid://odakag615brs" path="res://level2/decoration/doors/d1.PNG" id="2_6qxgb"]
+[ext_resource type="Texture2D" uid="uid://br0lwfejq3l4p" path="res://level2/decoration/doors/d2.PNG" id="3_t2ssp"]
+[ext_resource type="Texture2D" uid="uid://bnusnmkpmhtkc" path="res://level2/decoration/doors/d3.PNG" id="4_k2ru6"]
+[ext_resource type="Texture2D" uid="uid://dtpgsp7g27ii" path="res://level2/decoration/doors/d4.PNG" id="5_aany1"]
+[ext_resource type="Texture2D" uid="uid://dwhgtkq7gmaql" path="res://level2/decoration/doors/d5.PNG" id="6_xx14m"]
+[ext_resource type="Texture2D" uid="uid://bn1jr0rdyc3ot" path="res://level2/decoration/doors/d6.PNG" id="7_ei3k1"]
+[ext_resource type="Texture2D" uid="uid://ce0n5no5sbwop" path="res://level2/decoration/doors/d7.PNG" id="8_7t4ww"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qjdxw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6qxgb")
+}],
+"loop": true,
+"name": &"d1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_t2ssp")
+}],
+"loop": true,
+"name": &"d2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_k2ru6")
+}],
+"loop": true,
+"name": &"d3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_aany1")
+}],
+"loop": true,
+"name": &"d4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_xx14m")
+}],
+"loop": true,
+"name": &"d5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ei3k1")
+}],
+"loop": true,
+"name": &"d6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_7t4ww")
+}],
+"loop": true,
+"name": &"d7",
+"speed": 5.0
+}]
+
+[node name="level_2_wall" type="Node2D"]
+script = ExtResource("1_27phs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qjdxw")
+animation = &"d7"
