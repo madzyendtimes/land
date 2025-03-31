@@ -15,6 +15,7 @@ var isground=true
 func playgame():
 	pass
 func _ready() -> void:
+	Flags.mode="level"
 	var count=0
 	var sfloc=Flags.rng.randi_range(50,400)
 	for i in range(0,500):
@@ -89,7 +90,22 @@ func _ready() -> void:
 	
 	
 	
-	pass # Replace with function body.
+func doEffect(effect):
+	if Flags.mode!="level":
+		Flags.tne.dotime(self,[doEffect.bind(effect)],.5,"retryEvent",true,"level")
+		return
+	var sEff=effect.name
+	var aSel = sEff.split("|")
+	if aSel.size()>1:
+		sEff=aSel[Flags.rng.randi_range(0,aSel.size()-1)]		
+	#print(sEff)
+	match sEff:
+		"addgems":
+			var g=Flags.rng.randi_range(1,5)+Flags.playerStats.rizz
+			Flags.megaStats.gems+=g
+			$player.stat("+","gem",g)
+			Flags.save()
+			Flags.play("gemget")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

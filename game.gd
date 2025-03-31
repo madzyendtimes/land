@@ -1,8 +1,8 @@
 extends Node2D
 
 var start:PackedScene=load("res://start_screen.tscn");
-var level1:PackedScene=load("res://level.tscn")
-var level2:PackedScene=load("res://levels/level2/level_2.tscn")
+#var level1:PackedScene=load("res://level.tscn")
+#var level2:PackedScene=load("res://levels/level2/level_2.tscn")
 var startScreen
 var level1Scene
 var inStart:=true
@@ -74,14 +74,16 @@ func _process(delta: float) -> void:
 	if ev != null:
 		match ev.name:
 			"acheivement":
-				print("acheivement",ev.param)
+				#print("acheivement",ev.param)
 				$acheivement.visible=true
 				$acheivement/Label.text="acheivement:"+ev.param.obj.name+"\n"+ev.param.obj.description+"\n"+str(ev.param.obj.points)+" points"
 				if !Flags.uberStats.acheivements.has("total"):
 					Flags.uberStats.acheivements["total"]=0
 				Flags.uberStats.acheivements["total"]+=ev.param.obj.points
 				Flags.tne.dotime(self,[hideac],3.0,"hideacheivement",true,"main")
-
+			"next":
+				doNext()
+				
 func dostart():
 	startScreen=start.instantiate()
 	inStart=true
@@ -98,15 +100,15 @@ func removeScene():
 
 func doNext():
 	lvl+=1
-	loadlevel(lvl)
+	playgame()
 
 
 func loadlevel(version):
-#	if level!=null:
-#		level.queue_free()
+	if level!=null:
+		level.queue_free()
 	levelscene=load(levels[version])
 	level=levelscene.instantiate()
-	add_child(level)
+	#add_child(level)
 
 
 func playgame():

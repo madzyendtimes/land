@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://btc4gueojibu1"]
+[gd_scene load_steps=4 format=3 uid="uid://btc4gueojibu1"]
 
 [ext_resource type="Script" uid="uid://b12rupfby1bm1" path="res://levels/level2/level_2.gd" id="1_ywaul"]
+[ext_resource type="PackedScene" uid="uid://3gjeujea1ubj" path="res://stanimabar.tscn" id="2_0y3to"]
+[ext_resource type="PackedScene" uid="uid://dw8ngxov1xaxq" path="res://healthbar.tscn" id="3_r77n2"]
 
 [node name="level2" type="Node2D"]
 script = ExtResource("1_ywaul")
@@ -14,3 +16,15 @@ script = ExtResource("1_ywaul")
 [node name="enemies" type="Node2D" parent="playarea"]
 
 [node name="fore" type="Node2D" parent="playarea"]
+
+[node name="stanimabar" parent="." instance=ExtResource("2_0y3to")]
+offset_top = 126.0
+offset_right = 28.0
+offset_bottom = 328.0
+scale = Vector2(2, 2)
+
+[node name="healthbar" parent="." instance=ExtResource("3_r77n2")]
+offset_left = 8.0
+offset_top = 585.0
+offset_right = 1150.0
+offset_bottom = 635.0
