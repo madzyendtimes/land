@@ -16,6 +16,8 @@ func playgame():
 	pass
 func _ready() -> void:
 	Flags.mode="level"
+	Flags.playerStats.health=Flags.playerStats.maxHealth
+	Flags.playerStats.stanima=Flags.playerStats.maxStanima
 	var count=0
 	var sfloc=Flags.rng.randi_range(50,400)
 	for i in range(0,500):
@@ -121,12 +123,23 @@ func _process(delta: float) -> void:
 		player.right()
 		$playarea.position.x+=Flags.dir*(Flags.playerStats.speed+3)
 
+
 	if Input.is_action_pressed("jump"):
 		player.jump()
 	if Input.is_action_just_released("jump"):
 		player.unjump()
 	if Input.is_action_pressed("run"):
-		Flags.playerStats.bonusSpeed=3
+		if !player.exhaust:		
+			Flags.playerStats.bonusSpeed=3
+			Flags.playerStats.stanima-=Flags.playerStats.stanimaRate
+			if Flags.playerStats.stanima<1:
+				Flags.playerStats.bonusSpeed=0
+				player.exhausted()		
+	else:
+		if Flags.playerStats.stanima<Flags.playerStats.maxStanima:
+			Flags.playerStats.stanima+=Flags.playerStats.stanimaRate
+			if (Flags.playerStats.stanima>=Flags.playerStats.maxStanima)&&player.exhaust:
+				player.unexhausted()
 	if Input.is_action_just_released("run"):
 		Flags.playerStats.bonusSpeed=0
 	if Input.is_action_pressed("down"):

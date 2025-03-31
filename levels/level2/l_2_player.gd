@@ -9,6 +9,7 @@ var injump=false
 var upspeed=15
 var canmove=true
 var speed=1
+var exhaust=false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -33,6 +34,8 @@ func uncrouch():
 	$AnimatedSprite2D.animation="default"	
 
 func fight():
+	if exhaust:
+		return
 	if injump || freefall:
 		return
 	$pfight/CollisionShape2D.disabled=false
@@ -55,6 +58,8 @@ func unjump():
 	injump=false
 	
 func jump():
+	if exhaust:
+		return
 	if $AnimatedSprite2D.animation=="crouch":
 		uncrouch()
 	if jumpaction>0:
@@ -100,9 +105,21 @@ func _process(delta: float) -> void:
 		freefall=false 
 	Flags.playerpositiony=position.y
 
+func hit(dmg=1):
+	Flags.playerStats.health-=dmg
+
+func exhausted():
+	$AnimatedSprite2D.animation="exhausted"
+	exhaust=true
+func unexhausted():
+	$AnimatedSprite2D.animation="default"
+	exhaust=false
+	
 func _on_pbody_area_entered(area: Area2D) -> void:
 	if area.kind=="friendly":
 		area.makefriend(5)
+	else:
+		hit()
 	pass # Replace with function body.
 
 
