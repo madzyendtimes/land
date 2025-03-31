@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c6wk6om486pjl"]
 
-[ext_resource type="Script" path="res://vampiregas.gd" id="1_yvslo"]
+[ext_resource type="Script" uid="uid://bj7bymfinsfub" path="res://vampiregas.gd" id="1_yvslo"]
 [ext_resource type="Texture2D" uid="uid://cfeqp6lyrt0jj" path="res://enemies/missles/vampiregas/gas1.PNG" id="2_qcndo"]
 [ext_resource type="Texture2D" uid="uid://46rhry7obu3l" path="res://enemies/missles/vampiregas/gas2.PNG" id="3_nlek0"]
 [ext_resource type="Texture2D" uid="uid://ei0ydvqbwoyo" path="res://enemies/missles/vampiregas/gas3.PNG" id="4_clbfy"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bvmdraii7ccwl"]
 
-[ext_resource type="Script" path="res://spaceattack.gd" id="1_xie1l"]
+[ext_resource type="Script" uid="uid://b8edb8q0thlcb" path="res://spaceattack.gd" id="1_xie1l"]
 [ext_resource type="PackedScene" uid="uid://rts3a3drt7ql" path="res://playership.tscn" id="2_byke4"]
 [ext_resource type="AudioStream" uid="uid://cgg7kwuwex8bh" path="res://space/sounds/gem.wav" id="3_g6k06"]
 [ext_resource type="AudioStream" uid="uid://bg5evqcgkx1is" path="res://space/sounds/laser.wav" id="4_0sv45"]

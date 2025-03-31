@@ -12,7 +12,8 @@ var player
 var dir=1
 var isground=true
 
-
+func playgame():
+	pass
 func _ready() -> void:
 	var count=0
 	var sfloc=Flags.rng.randi_range(50,400)

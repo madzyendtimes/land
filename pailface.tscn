@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dbooao61w5erw"]
 
 [ext_resource type="Texture2D" uid="uid://dh8srqvdkify4" path="res://npc/pailface/pailface1.PNG" id="1_78xwq"]
-[ext_resource type="Script" path="res://pailface.gd" id="1_xwvoh"]
+[ext_resource type="Script" uid="uid://dhmgpn3s0uv0k" path="res://pailface.gd" id="1_xwvoh"]
 [ext_resource type="Texture2D" uid="uid://cpo4wjq2iog44" path="res://npc/pailface/pailface2.PNG" id="2_usmju"]
 [ext_resource type="Texture2D" uid="uid://b3iogd757n7sh" path="res://npc/pailface/text.PNG" id="3_6ygby"]
 [ext_resource type="Texture2D" uid="uid://tv5cthqffulr" path="res://npc/pailface/keytext.PNG" id="5_30j1k"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cpm4tmnn754ff"]
 
-[ext_resource type="Script" path="res://groundling.gd" id="1_xhkfi"]
+[ext_resource type="Script" uid="uid://c122txi6evs5m" path="res://groundling.gd" id="1_xhkfi"]
 [ext_resource type="Texture2D" uid="uid://dhyf35vk7m5y4" path="res://enemies/groundling/walk1.PNG" id="2_0hg70"]
 [ext_resource type="Texture2D" uid="uid://cwkwuw5cty8kt" path="res://enemies/groundling/dead.PNG" id="2_yw45e"]
 [ext_resource type="Texture2D" uid="uid://5qriq87yaccr" path="res://enemies/groundling/walk2.PNG" id="3_rwkqk"]

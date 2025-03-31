@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://biglriot8avek"]
 
-[ext_resource type="Script" path="res://inputbutton.gd" id="1_4omwg"]
+[ext_resource type="Script" uid="uid://bvcnu7qb10sh" path="res://inputbutton.gd" id="1_4omwg"]
 [ext_resource type="Texture2D" uid="uid://cv8egekpw3ybr" path="res://input/controller/fight.PNG" id="1_iurmk"]
 [ext_resource type="Texture2D" uid="uid://w1s1wqw7a7ef" path="res://input/controller/fightpressed.PNG" id="2_alvn6"]
 [ext_resource type="Texture2D" uid="uid://cl15jged6rdd1" path="res://input/controller/jump.PNG" id="3_bjfeh"]

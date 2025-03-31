@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://b6jccahuqdv5t"]
 
 [ext_resource type="Texture2D" uid="uid://dja3d4y83r1jm" path="res://enterable/witchhut/assets/spellbook/arm.PNG" id="1_1jyq3"]
-[ext_resource type="Script" path="res://recipe.gd" id="1_oj50j"]
+[ext_resource type="Script" uid="uid://dfpkafgj10ute" path="res://recipe.gd" id="1_oj50j"]
 [ext_resource type="Texture2D" uid="uid://fg7v6b4q22dv" path="res://enterable/witchhut/assets/spellbook/clothes.PNG" id="2_guw0p"]
 [ext_resource type="Texture2D" uid="uid://bpyq235m2j524" path="res://enterable/witchhut/assets/spellbook/eyes.PNG" id="3_xhxvj"]
 [ext_resource type="Texture2D" uid="uid://jx2i5w0qeg1t" path="res://enterable/witchhut/assets/spellbook/face.PNG" id="4_2ovpk"]

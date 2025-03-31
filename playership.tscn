@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://rts3a3drt7ql"]
 
-[ext_resource type="Script" path="res://playership.gd" id="1_jjcto"]
+[ext_resource type="Script" uid="uid://cd32p2tbtbdaa" path="res://playership.gd" id="1_jjcto"]
 [ext_resource type="Texture2D" uid="uid://drredbwdvxpxa" path="res://space/ships/trips/damage/d3/IMG_6614.PNG" id="2_2l6tp"]
 [ext_resource type="Texture2D" uid="uid://bkfi3nqjflba" path="res://space/ships/trips/IMG_6567.PNG" id="2_nibyu"]
 [ext_resource type="Texture2D" uid="uid://211qt8okh2u6" path="res://space/ships/trips/damage/d3/IMG_6618.PNG" id="3_0w7mq"]

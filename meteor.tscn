@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://kt4d4fyfimp8"]
 
 [ext_resource type="Texture2D" uid="uid://hk041nl58no3" path="res://space/stars/meteor.PNG" id="1_bjpaj"]
-[ext_resource type="Script" path="res://meteor.gd" id="1_f3gfh"]
+[ext_resource type="Script" uid="uid://dowhg2qj01w7g" path="res://meteor.gd" id="1_f3gfh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t8tpa"]
 animations = [{

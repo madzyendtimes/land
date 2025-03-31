@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://xxvio62d2i8y"]
 
-[ext_resource type="Script" path="res://knifulator.gd" id="1_gj11l"]
+[ext_resource type="Script" uid="uid://bp22jnmll75q8" path="res://knifulator.gd" id="1_gj11l"]
 [ext_resource type="Texture2D" uid="uid://c0q1iryqkq6on" path="res://enemies/knifulator/dead.PNG" id="2_3727t"]
 [ext_resource type="Texture2D" uid="uid://cl2eppocr6mt3" path="res://enemies/knifulator/k1.PNG" id="3_acjex"]
 [ext_resource type="Texture2D" uid="uid://cxq81j2n7tyj" path="res://enemies/knifulator/k2.PNG" id="4_vr12k"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://3e4nurw16uev"]
 
-[ext_resource type="Script" path="res://ghost.gd" id="1_qnf7r"]
+[ext_resource type="Script" uid="uid://bxhexsfe5e4p4" path="res://ghost.gd" id="1_qnf7r"]
 [ext_resource type="Texture2D" uid="uid://c8u0yg2c63htg" path="res://enterable/temple/assets/demonghost1.PNG" id="1_uo0ff"]
 [ext_resource type="Texture2D" uid="uid://bj5tglf4mojyl" path="res://enterable/temple/assets/demonghost2.PNG" id="2_6pnmj"]
 [ext_resource type="Texture2D" uid="uid://bleoosf2fllbl" path="res://enterable/temple/assets/holyghost1.PNG" id="3_6htne"]

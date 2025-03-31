@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dtgxlfvbv3vte"]
 
 [ext_resource type="Texture2D" uid="uid://d0u7i6lcnsvfn" path="res://enemies/diapertooth/diapertooth1.PNG" id="1_2g1cs"]
-[ext_resource type="Script" path="res://monster_tall.gd" id="1_4ars4"]
+[ext_resource type="Script" uid="uid://byl4uq8ajr71j" path="res://monster_tall.gd" id="1_4ars4"]
 [ext_resource type="Texture2D" uid="uid://v3uhnxfjmniu" path="res://enemies/diapertooth/diapertooth2.PNG" id="2_obd2l"]
 [ext_resource type="Texture2D" uid="uid://coys71fu8kkom" path="res://enemies/diapertooth/diapertooth3.PNG" id="3_cknxo"]
 [ext_resource type="Texture2D" uid="uid://crfdarwti6ivl" path="res://enemies/diapertooth/diapertooth4.PNG" id="4_rl2sn"]

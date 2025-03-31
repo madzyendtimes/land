@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c4xohmmiv8rna"]
 
-[ext_resource type="Script" path="res://wall.gd" id="1_8uncf"]
+[ext_resource type="Script" uid="uid://fa6dxjp3bqki" path="res://wall.gd" id="1_8uncf"]
 [ext_resource type="Texture2D" uid="uid://dvr613mvyitev" path="res://platform/dangerwall.PNG" id="2_g3q20"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5l5c8"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://bid0ue1i8kuhe"]
 
 [ext_resource type="Texture2D" uid="uid://dtm1mcs1ddp4o" path="res://npc/fanguymanly/fanguymanly1.PNG" id="1_dn1sp"]
-[ext_resource type="Script" path="res://flavornpc.gd" id="1_y36xa"]
+[ext_resource type="Script" uid="uid://ddm356tn1i7r1" path="res://flavornpc.gd" id="1_y36xa"]
 [ext_resource type="Texture2D" uid="uid://bupdrdias4m1r" path="res://npc/fanguymanly/fanguymanly2.PNG" id="2_0g060"]
 [ext_resource type="Texture2D" uid="uid://ds14enqtivmx2" path="res://npc/emmaemo/emo1.PNG" id="2_roi4w"]
 [ext_resource type="Texture2D" uid="uid://cbqoxtwfwkl21" path="res://npc/emmaemo/emo2.PNG" id="3_kt4ud"]

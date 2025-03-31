@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://cdl0d4ifiqq6c"]
 
-[ext_resource type="Script" path="res://gravestone.gd" id="1_rdm4l"]
+[ext_resource type="Script" uid="uid://duyn7b47yg3hp" path="res://gravestone.gd" id="1_rdm4l"]
 [ext_resource type="Texture2D" uid="uid://c7fvw42iifmge" path="res://decorations/atmosphere/dmg4.PNG" id="2_trkog"]
 [ext_resource type="Texture2D" uid="uid://bvnkf1ucmlv6s" path="res://decorations/atmosphere/dmg3.PNG" id="3_2m1tp"]
 [ext_resource type="Texture2D" uid="uid://bt855jc6cevmv" path="res://decorations/atmosphere/dmg2.PNG" id="4_2raxf"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://nt03jaa70cd6" path="res://decorations/atmosphere/action1.PNG" id="7_k3uun"]
 [ext_resource type="Texture2D" uid="uid://bsa8w30g18ol6" path="res://decorations/atmosphere/action2.PNG" id="8_72d3v"]
 [ext_resource type="Texture2D" uid="uid://2ejrnpab5vle" path="res://decorations/atmosphere/action3.PNG" id="9_y15xe"]
-[ext_resource type="Script" path="res://levelghost.gd" id="10_r4ovy"]
+[ext_resource type="Script" uid="uid://dhqetnjblnwwr" path="res://levelghost.gd" id="10_r4ovy"]
 [ext_resource type="Texture2D" uid="uid://c8u0yg2c63htg" path="res://enterable/temple/assets/demonghost1.PNG" id="11_m7l4n"]
 [ext_resource type="Texture2D" uid="uid://bj5tglf4mojyl" path="res://enterable/temple/assets/demonghost2.PNG" id="12_sqvio"]
 [ext_resource type="Texture2D" uid="uid://bleoosf2fllbl" path="res://enterable/temple/assets/holyghost1.PNG" id="13_2dbke"]

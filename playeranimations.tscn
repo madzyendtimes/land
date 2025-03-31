@@ -1,6 +1,6 @@
 [gd_scene load_steps=93 format=3 uid="uid://b8weel8tkrme6"]
 
-[ext_resource type="Shader" path="res://player.gdshader" id="1_5cr5w"]
+[ext_resource type="Shader" uid="uid://4htwtcvai0gf" path="res://player.gdshader" id="1_5cr5w"]
 [ext_resource type="Texture2D" uid="uid://do5nyxgycy7tm" path="res://player/crouch/crouch1.PNG" id="2_xhk0o"]
 [ext_resource type="Texture2D" uid="uid://ct2mbwxe2wv2w" path="res://player/crouch/crouch2(1).PNG" id="3_0mn5h"]
 [ext_resource type="Texture2D" uid="uid://b3n5qjr3jolw3" path="res://player/crouch/crouch2.PNG" id="4_c30kk"]

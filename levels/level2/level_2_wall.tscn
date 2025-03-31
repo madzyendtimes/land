@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bjebmhikvwvti"]
 
-[ext_resource type="Script" path="res://level_2_wall.gd" id="1_27phs"]
+[ext_resource type="Script" uid="uid://caagaw6v6oivr" path="res://level_2_wall.gd" id="1_27phs"]
 [ext_resource type="Texture2D" uid="uid://odakag615brs" path="res://level2/decoration/doors/d1.PNG" id="2_6qxgb"]
 [ext_resource type="Texture2D" uid="uid://jjgw068pr83e" path="res://level2/decoration/doors/d10.PNG" id="3_puyi5"]
 [ext_resource type="Texture2D" uid="uid://br0lwfejq3l4p" path="res://level2/decoration/doors/d2.PNG" id="3_t2ssp"]

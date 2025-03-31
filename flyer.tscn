@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://g1ac1yi42oru"]
 
-[ext_resource type="Script" path="res://flyer.gd" id="1_m8uu6"]
+[ext_resource type="Script" uid="uid://bjxey448cpmaf" path="res://flyer.gd" id="1_m8uu6"]
 [ext_resource type="Texture2D" uid="uid://bsg1447kn5qbx" path="res://enemies/flying/flyling1.PNG" id="1_p0hsu"]
 [ext_resource type="Texture2D" uid="uid://cyiighsd10r2r" path="res://enemies/flying/flyling2.PNG" id="2_1ce11"]
 [ext_resource type="Texture2D" uid="uid://sd4v2wrmitvy" path="res://enemies/flying/flyingb1.PNG" id="2_e3a5r"]

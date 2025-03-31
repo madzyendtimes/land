@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bff6jqo0ykwnq"]
 
-[ext_resource type="Script" path="res://level_2_big_fore.gd" id="1_jah42"]
+[ext_resource type="Script" uid="uid://gxqqw7yabo07" path="res://level_2_big_fore.gd" id="1_jah42"]
 [ext_resource type="Texture2D" uid="uid://dx4fbfbgli0h" path="res://level2/decoration/fore/bf1.PNG" id="2_s44lb"]
 [ext_resource type="Texture2D" uid="uid://mk2bb1gevoex" path="res://level2/decoration/fore/bf2.PNG" id="3_asipc"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://qvhfqa3kjxom"]
 
 [ext_resource type="Texture2D" uid="uid://gilk4h7ba2xp" path="res://player/dead.PNG" id="1_87e6u"]
-[ext_resource type="Script" path="res://trash.gd" id="1_uhsav"]
+[ext_resource type="Script" uid="uid://8ttpqqxdxomk" path="res://trash.gd" id="1_uhsav"]
 [ext_resource type="Texture2D" uid="uid://bg8qyicqk8lwl" path="res://enemies/diapertooth/diapertoothdead.PNG" id="2_74s4n"]
 [ext_resource type="Texture2D" uid="uid://bepcn7a4cf3jb" path="res://enemies/goopbaby/dead.PNG" id="3_63802"]
 [ext_resource type="Texture2D" uid="uid://cwkwuw5cty8kt" path="res://enemies/groundling/dead.PNG" id="4_hf63r"]

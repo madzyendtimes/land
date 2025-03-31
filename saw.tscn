@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://6taqotu3l4of"]
 
-[ext_resource type="Script" path="res://saw.gd" id="1_enmqw"]
+[ext_resource type="Script" uid="uid://b2yswcqgggtpc" path="res://saw.gd" id="1_enmqw"]
 [ext_resource type="Texture2D" uid="uid://cqsnjc8n02j1j" path="res://enemies/saw/dead.PNG" id="2_pkopw"]
 [ext_resource type="Texture2D" uid="uid://dfiqlxh8j44il" path="res://enemies/saw/saw1.PNG" id="3_hwqar"]
 [ext_resource type="Texture2D" uid="uid://cqxr2206q76ja" path="res://enemies/saw/saw2.PNG" id="4_nfk46"]

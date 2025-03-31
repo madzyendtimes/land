@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bd5wvmtgxelxd"]
 
 [ext_resource type="Texture2D" uid="uid://dpwd2dwlvojg4" path="res://pets/liltrip/walk2.PNG" id="1_caqu4"]
-[ext_resource type="Script" path="res://liltrip.gd" id="1_nooq3"]
+[ext_resource type="Script" uid="uid://cvu7p1wi4ce0m" path="res://liltrip.gd" id="1_nooq3"]
 [ext_resource type="Texture2D" uid="uid://b4hfwefi501s5" path="res://pets/liltrip/attack1.PNG" id="2_ido20"]
 [ext_resource type="Texture2D" uid="uid://bim0mrff6fwbx" path="res://pets/liltrip/attack2.PNG" id="3_0c51p"]
 [ext_resource type="Texture2D" uid="uid://bievdrsifawbt" path="res://pets/liltrip/sit1.PNG" id="4_1u0m0"]

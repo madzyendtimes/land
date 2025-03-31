@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://4ig6uxkuhcbc" path="res://decorations/atmosphere/ground18.PNG" id="18_rtyfi"]
 [ext_resource type="Texture2D" uid="uid://cabnsehl3gdkd" path="res://decorations/atmosphere/ground19.PNG" id="19_jaw0u"]
 [ext_resource type="Texture2D" uid="uid://bdeack1q8xatm" path="res://decorations/atmosphere/ground20.PNG" id="20_1s24s"]
-[ext_resource type="Script" path="res://grass.gd" id="21_u5imx"]
+[ext_resource type="Script" uid="uid://6deofjr00g7i" path="res://grass.gd" id="21_u5imx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nq5xv"]
 animations = [{

@@ -2,10 +2,15 @@ extends Node2D
 
 var start:PackedScene=load("res://start_screen.tscn");
 var level1:PackedScene=load("res://level.tscn")
+var level2:PackedScene=load("res://levels/level2/level_2.tscn")
 var startScreen
 var level1Scene
 var inStart:=true
 var instantiated:=false
+var lvl=1
+var level
+var levelscene:PackedScene=load("res://level.tscn")
+var levels=["res://level.tscn","res://levels/level2/level_2.tscn"]
 
 
 func _ready():
@@ -88,21 +93,32 @@ func restart():
 	Flags.tne.dotime(self,[removeScene],.1,"removeScene",true)
 
 func removeScene():
-	remove_child(level1Scene)	
+	remove_child(level)	
 	instantiated=false
 
+func doNext():
+	lvl+=1
+	loadlevel(lvl)
+
+
+func loadlevel(version):
+#	if level!=null:
+#		level.queue_free()
+	levelscene=load(levels[version])
+	level=levelscene.instantiate()
+	add_child(level)
 
 
 func playgame():
 	inStart=false
 	instantiated=true
-	level1Scene=level1.instantiate()
-
+	#level1Scene=level1.instantiate()
+	loadlevel(lvl)
 	Flags.tne.dotime(self,[treeUpdate],.5,"treeupdate",true)
 
 func treeUpdate():
 	killStart()
-	add_child(level1Scene)
+	add_child(level)
 
 	Flags.tne.dotime(self,[killStart],.5,"killstart",true)
 

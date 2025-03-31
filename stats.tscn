@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dywaphievidhc"]
 
-[ext_resource type="Script" path="res://stats.gd" id="1_370n0"]
+[ext_resource type="Script" uid="uid://dw3ibcfmvs4v3" path="res://stats.gd" id="1_370n0"]
 [ext_resource type="Theme" uid="uid://cgqwnkq2d1mka" path="res://stattheme.tres" id="1_ruft0"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_gil17"]

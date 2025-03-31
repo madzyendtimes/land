@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=3 uid="uid://bfsv7rap1wsp8"]
 
-[ext_resource type="Script" path="res://braino.gd" id="1_1ahjy"]
+[ext_resource type="Script" uid="uid://bd4np6tn2cm2f" path="res://braino.gd" id="1_1ahjy"]
 [ext_resource type="Texture2D" uid="uid://cy7k73ltjbsdw" path="res://enemies/braino/attack1.PNG" id="2_lvf77"]
 [ext_resource type="Texture2D" uid="uid://bc8gwxpw0ryek" path="res://enemies/braino/attack2.PNG" id="3_tb4ei"]
 [ext_resource type="Texture2D" uid="uid://b57co1qsl52b" path="res://enemies/braino/attack3.PNG" id="4_nnttq"]

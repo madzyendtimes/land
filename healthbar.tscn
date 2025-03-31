@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d32b1umcsupr8" path="res://statbars/IMG_6408.PNG" id="3_0apb0"]
 [ext_resource type="Texture2D" uid="uid://gy0xb1mct6oi" path="res://statbars/health.PNG" id="4_koh4x"]
 [ext_resource type="Texture2D" uid="uid://dxfnm8q8dxn1q" path="res://statbars/IMG_6409.PNG" id="5_5hl76"]
-[ext_resource type="Script" path="res://texture_progress_bar.gd" id="6_r557d"]
+[ext_resource type="Script" uid="uid://ce5my4tkmp2al" path="res://texture_progress_bar.gd" id="6_r557d"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_wwrqp"]
 frames = 3

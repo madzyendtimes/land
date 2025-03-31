@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://ej35f8d30wde"]
 
-[ext_resource type="Script" path="res://enterable.gd" id="1_s0w2e"]
+[ext_resource type="Script" uid="uid://cavifvl17q6nm" path="res://enterable.gd" id="1_s0w2e"]
 [ext_resource type="Texture2D" uid="uid://cxwsygujr1gmc" path="res://enterable/cryptominos/facade/back.PNG" id="2_twv8i"]
 [ext_resource type="Texture2D" uid="uid://bf6hoqud67rt3" path="res://enterable/cryptominos/facade/front.PNG" id="3_5tqrh"]
 [ext_resource type="Texture2D" uid="uid://xuvmd8v88x3x" path="res://enterable/temple/facade/back.PNG" id="3_epco5"]

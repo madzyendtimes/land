@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://bv1r3uf6jmfs6"]
 
-[ext_resource type="Script" path="res://joboard.gd" id="1_k56gg"]
+[ext_resource type="Script" uid="uid://cqffby2qed6gn" path="res://joboard.gd" id="1_k56gg"]
 [ext_resource type="Texture2D" uid="uid://bib5j5mfmltle" path="res://npc/epsilon frank/empty.PNG" id="2_2hetd"]
 [ext_resource type="Texture2D" uid="uid://l556nvylge07" path="res://npc/epsilon frank/ep1.PNG" id="2_j01hi"]
 [ext_resource type="Texture2D" uid="uid://dbto2te3j8r7" path="res://npc/epsilon frank/ep2.PNG" id="3_1jp5b"]

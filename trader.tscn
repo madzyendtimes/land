@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://bnkp4iv4btgno"]
 
-[ext_resource type="Script" path="res://trader.gd" id="1_3qe6a"]
+[ext_resource type="Script" uid="uid://dybma573y8x82" path="res://trader.gd" id="1_3qe6a"]
 [ext_resource type="AudioStream" uid="uid://cbfs2xeaanff6" path="res://sounds/buzz.mp3" id="2_j885c"]
 [ext_resource type="FontFile" uid="uid://ck07uk066rkqa" path="res://fonts/Metalien.otf" id="2_rkvjt"]
 [ext_resource type="Texture2D" uid="uid://dswtsk7j5ibfc" path="res://npc/gemna/gemnacomplete2.PNG" id="3_x27aj"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ckp7d15fqsuqr"]
 
-[ext_resource type="Script" path="res://eggmissle.gd" id="1_wdbhj"]
+[ext_resource type="Script" uid="uid://ld4c2hnr28u3" path="res://eggmissle.gd" id="1_wdbhj"]
 [ext_resource type="Texture2D" uid="uid://lx7fo5634j13" path="res://enemies/missles/egg/flat.PNG" id="2_f7ffk"]
 [ext_resource type="Texture2D" uid="uid://dci75ivyevf4l" path="res://enemies/missles/egg/egg1.PNG" id="3_mk2dq"]
 [ext_resource type="Texture2D" uid="uid://wssle0plwbnt" path="res://enemies/missles/egg/egg2.PNG" id="4_d8xll"]

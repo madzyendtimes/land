@@ -92,7 +92,6 @@ func _ready():
 	Flags.reset()
 	baseSpeed=Flags.megaStats.speed
 	speed=baseSpeed
-	$"..".killStart() #this needs to change
 	$treeholder.position.y=-100
 
 	treeholderResetY=$treeholder.position.y

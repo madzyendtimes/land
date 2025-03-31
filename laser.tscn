@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://dfht18amavqmm"]
 
-[ext_resource type="Script" path="res://laser.gd" id="1_ool4t"]
+[ext_resource type="Script" uid="uid://bh102xxtmvah0" path="res://laser.gd" id="1_ool4t"]
 [ext_resource type="Texture2D" uid="uid://c6pa0re1batil" path="res://enemies/ufo/laser/laser1.PNG" id="2_ih6p4"]
 [ext_resource type="Texture2D" uid="uid://blpt57lj3cegb" path="res://enemies/ufo/laser/laser2.PNG" id="3_8a8gk"]
 [ext_resource type="Texture2D" uid="uid://tvetbp2tctfe" path="res://enemies/ufo/laser/laser3.PNG" id="4_ni3tr"]
-[ext_resource type="Script" path="res://laserbody.gd" id="5_wsyjk"]
+[ext_resource type="Script" uid="uid://8nc6u82dmwa5" path="res://laserbody.gd" id="5_wsyjk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xm7ck"]
 animations = [{

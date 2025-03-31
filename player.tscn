@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://cdj8g8hh6wurl"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_ohfo4"]
+[ext_resource type="Script" uid="uid://m7gkh8dpyyfi" path="res://player.gd" id="1_ohfo4"]
 [ext_resource type="PackedScene" uid="uid://b8weel8tkrme6" path="res://playeranimations.tscn" id="2_i00rk"]
 [ext_resource type="AudioStream" uid="uid://b5diaegodc4xu" path="res://sounds/die.mp3" id="70_tceja"]
 [ext_resource type="AudioStream" uid="uid://cbglxmkk1gbwe" path="res://sounds/punch1.mp3" id="71_a8c0g"]

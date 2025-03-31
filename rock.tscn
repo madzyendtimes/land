@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://deofurri717ld"]
 
-[ext_resource type="Script" path="res://rock.gd" id="1_k7xbt"]
+[ext_resource type="Script" uid="uid://bl28frmf3ei00" path="res://rock.gd" id="1_k7xbt"]
 [ext_resource type="Texture2D" uid="uid://dtyfccaltintm" path="res://rocks/rock3/rock1.PNG" id="1_uv5by"]
 [ext_resource type="Texture2D" uid="uid://kuri4lcv8u8c" path="res://rocks/rock3/rock2.PNG" id="2_3ohho"]
 [ext_resource type="Texture2D" uid="uid://onf2rpxm3oc2" path="res://rocks/explode/explode1.PNG" id="2_y8nea"]

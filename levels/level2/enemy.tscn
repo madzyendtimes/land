@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://cd6pho0c4qmuy"]
 
-[ext_resource type="Script" path="res://levels/level2/enemy.gd" id="1_ginh4"]
+[ext_resource type="Script" uid="uid://ckp0lqqwh4d5p" path="res://levels/level2/enemy.gd" id="1_ginh4"]
 [ext_resource type="Texture2D" uid="uid://cn6jnmdwi5uur" path="res://enemies/goopbaby/stagea1.PNG" id="2_a8bqm"]
 [ext_resource type="Texture2D" uid="uid://brj4gsax6fiwm" path="res://enemies/goopbaby/stagea2.PNG" id="3_hbsuh"]
 [ext_resource type="Texture2D" uid="uid://cay5hn54oyrrw" path="res://enemies/goopbaby/stagea3.PNG" id="4_i2dn8"]
@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://flqk2twq5s8f" path="res://level2/freindly/fanguy/IMG_6919.PNG" id="23_2hr08"]
 [ext_resource type="Texture2D" uid="uid://cxuwdc5wb2mtc" path="res://level2/freindly/fanguy/IMG_6920.PNG" id="24_15oyn"]
 [ext_resource type="Texture2D" uid="uid://ci6iu11rbyl48" path="res://level2/freindly/fanguy/IMG_6921.PNG" id="25_dwauv"]
-[ext_resource type="Script" path="res://levels/level2/ebody.gd" id="27_hj8xe"]
+[ext_resource type="Script" uid="uid://bvgc67a3kxpio" path="res://levels/level2/ebody.gd" id="27_hj8xe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jgroj"]
 size = Vector2(98, 16)

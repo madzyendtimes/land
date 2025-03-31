@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bca5qkb3tq7ki"]
 
-[ext_resource type="Script" path="res://tb_5000.gd" id="1_lwigf"]
+[ext_resource type="Script" uid="uid://bkxv66q0wtlr6" path="res://tb_5000.gd" id="1_lwigf"]
 [ext_resource type="Texture2D" uid="uid://thamlae28mcg" path="res://space/ships/tb5000/dead/IMG_6606.PNG" id="2_71you"]
 [ext_resource type="Texture2D" uid="uid://d2il85ibtag3k" path="res://space/ships/tb5000/dead/IMG_6607.PNG" id="3_76s7l"]
 [ext_resource type="Texture2D" uid="uid://bxrpcw8ausxvo" path="res://space/ships/tb5000/dead/IMG_6608.PNG" id="4_oiffs"]

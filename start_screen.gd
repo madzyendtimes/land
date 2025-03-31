@@ -1,7 +1,8 @@
 extends Node2D
 var selected=1
 var home=self
-#var options={"controls":"controller","music":100,"fx":100,"randomizeDistribution":false,"seed":{"active":false,"value":"fun"},"startfresh":false,"graphics":"high"}
+
+#controls":"controller","music":100,"fx":100,"randomizeDistribution":false,"seed":{"active":false,"value":"fun"},"startfresh":false,"graphics":"high"}
 func _ready():
 	Flags.loadoptions()
 	#print("load options")
@@ -18,7 +19,9 @@ func _ready():
 	Flags.play(music,"music")	
 	#$AudioStreamPlayer2D.volume_db=Flags.options.music
 	#$PopupPanel/VBoxContainer.get_child(selected)
-	
+
+
+
 func populateoptions():
 
 	if Flags.options.controls=="keyboard":

@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://daalhhjwi7mri"]
 
-[ext_resource type="Script" path="res://weaponchooser.gd" id="1_rcnh4"]
+[ext_resource type="Script" uid="uid://cvaxcfekgy6ry" path="res://weaponchooser.gd" id="1_rcnh4"]
 [ext_resource type="Texture2D" uid="uid://du6q7021h8kyb" path="res://choosers/spinwheel/wheel.PNG" id="2_rreox"]
 [ext_resource type="Texture2D" uid="uid://dkh1n3ul12a04" path="res://choosers/items/weapons/IMG_6660.PNG" id="3_amaks"]
 [ext_resource type="Texture2D" uid="uid://c3uxu2cgnr6m3" path="res://choosers/spinwheel/needle1.PNG" id="3_jgdb2"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://br47nnvygwi63" path="res://choosers/items/weapons/IMG_6659.PNG" id="7_do1lt"]
 [ext_resource type="Texture2D" uid="uid://b08lmx4o6d2kw" path="res://choosers/items/weapons/IMG_6661.PNG" id="8_r8jl6"]
 [ext_resource type="Texture2D" uid="uid://7aous4dsec42" path="res://choosers/items/weapons/IMG_6658.PNG" id="9_ma1g0"]
-[ext_resource type="Script" path="res://needlechoice.gd" id="11_n73bj"]
+[ext_resource type="Script" uid="uid://tw5im164wcr4" path="res://needlechoice.gd" id="11_n73bj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kjmsp"]
 animations = [{

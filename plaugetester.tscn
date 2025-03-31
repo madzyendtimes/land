@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://br7mye3jii4pp"]
 
-[ext_resource type="Script" path="res://plaugetester.gd" id="1_mp1fj"]
+[ext_resource type="Script" uid="uid://c8m8b878st0g4" path="res://plaugetester.gd" id="1_mp1fj"]
 [ext_resource type="Texture2D" uid="uid://yucj383yuwur" path="res://enemies/plaugetester/dead.PNG" id="2_ni0yi"]
 [ext_resource type="Texture2D" uid="uid://sq6lqpe5igo4" path="res://enemies/plaugetester/pt1.PNG" id="3_o24f4"]
 [ext_resource type="Texture2D" uid="uid://p1a1l600rn6k" path="res://enemies/plaugetester/pt2.PNG" id="4_pbpvs"]

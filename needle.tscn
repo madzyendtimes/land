@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cfifekepfwvle"]
 
-[ext_resource type="Script" path="res://needle.gd" id="1_58d5x"]
+[ext_resource type="Script" uid="uid://cfdyg1obiryeu" path="res://needle.gd" id="1_58d5x"]
 [ext_resource type="Texture2D" uid="uid://dsofxu06n21lr" path="res://enemies/missles/needle/needle1.PNG" id="2_td8es"]
 [ext_resource type="Texture2D" uid="uid://coahn4dhi0cg2" path="res://enemies/missles/needle/needle2.PNG" id="3_ingi5"]
 [ext_resource type="Texture2D" uid="uid://3nal60dndx8t" path="res://enemies/missles/needle/needle3.PNG" id="4_fw4uh"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bv50w7h5k1f47"]
 
-[ext_resource type="Script" path="res://spacelaser.gd" id="1_e6r7q"]
+[ext_resource type="Script" uid="uid://b16a7v26v8vqy" path="res://spacelaser.gd" id="1_e6r7q"]
 [ext_resource type="Texture2D" uid="uid://c6pa0re1batil" path="res://enemies/ufo/laser/laser1.PNG" id="2_j1663"]
 [ext_resource type="Texture2D" uid="uid://blpt57lj3cegb" path="res://enemies/ufo/laser/laser2.PNG" id="3_tpmf7"]
 [ext_resource type="Texture2D" uid="uid://tvetbp2tctfe" path="res://enemies/ufo/laser/laser3.PNG" id="4_7hy33"]

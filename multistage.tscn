@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://d2j0ll20iy6ha"]
 
-[ext_resource type="Script" path="res://multistage.gd" id="1_blsc5"]
+[ext_resource type="Script" uid="uid://b6vhp8k1rhibd" path="res://multistage.gd" id="1_blsc5"]
 [ext_resource type="Texture2D" uid="uid://bepcn7a4cf3jb" path="res://enemies/goopbaby/dead.PNG" id="2_fwwy8"]
 [ext_resource type="Texture2D" uid="uid://bov7rcq6p4rvg" path="res://enemies/goopbaby/stageb1.PNG" id="3_ccirr"]
 [ext_resource type="Texture2D" uid="uid://blwyynxvxmlnx" path="res://enemies/goopbaby/stageb2.PNG" id="4_ybbhy"]
